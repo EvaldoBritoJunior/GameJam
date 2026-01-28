@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_cp_sequences",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_cp_sequences",
+  "parent":{
+    "name":"Sequence",
+    "path":"folders/Scripts/Sequence.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
