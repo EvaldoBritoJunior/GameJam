@@ -1,4 +1,6 @@
-function draw_middle_center(_x, _y, _txt, _font = fnt_main_20, _color = c_white) {
+global.main_font = fnt_main;
+
+function draw_middle_center(_x, _y, _txt, _font = global.main_font, _color = c_white) {
 	draw_set_font(_font);
 	draw_set_color(_color);
 	draw_set_halign(fa_center);
@@ -11,7 +13,7 @@ function draw_middle_center(_x, _y, _txt, _font = fnt_main_20, _color = c_white)
 	draw_set_valign(fa_top);
 }
 
-function draw_outline(_x, _y, _text, _font = fnt_main_20, _text_color = c_white) {
+function draw_outline(_x, _y, _text, _font = global.main_font, _text_color = c_white) {
 	var _outline_color = c_black;
 	var _outline_thickness = 1; 
 	
@@ -35,7 +37,7 @@ function draw_outline(_x, _y, _text, _font = fnt_main_20, _text_color = c_white)
 	draw_text(_x, _y, _text);
 }
 
-function draw_center_outline(_x, _y, _text, _font = fnt_main_20, _text_color = c_white) {
+function draw_center_outline(_x, _y, _text, _font = global.main_font, _text_color = c_white) {
 	var _outline_color = c_black;
 	var _outline_thickness = 1; 
 	
@@ -63,7 +65,7 @@ function draw_center_outline(_x, _y, _text, _font = fnt_main_20, _text_color = c
 	draw_set_valign(fa_top);
 }
 
-function draw_middle_center_outline(_x, _y, _text, _font = fnt_main_20, _text_color = c_white) {
+function draw_middle_center_outline(_x, _y, _text, _font = global.main_font, _text_color = c_white) {
 	var _outline_color = c_black;
 	var _outline_thickness = 1; 
 	
@@ -92,7 +94,7 @@ function draw_middle_center_outline(_x, _y, _text, _font = fnt_main_20, _text_co
 	draw_set_valign(fa_top);
 }
 
-function draw_right_outline(_x, _y, _text, _font = fnt_main_20, _text_color = c_white) {
+function draw_right_outline(_x, _y, _text, _font = global.main_font, _text_color = c_white) {
 	var _outline_color = c_black;
 	var _outline_thickness = 1; 
 	
