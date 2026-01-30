@@ -34,7 +34,16 @@ start_dialogue = function(_dialogue) {
 	if (_char != current_npc) {
 		change_npc(_char);
 	}
-	image_index = get_humor(_char.humor)
+	
+	var _char_humor = _char.humor;
+	image_index = get_humor(_char_humor);
+	if (_char_humor > 8) {
+		add_audience_status(5);
+	} else if (_char_humor < 3) {
+		add_audience_status(-10);
+	} else if (_char_humor < 5) {
+		add_audience_status(-3);
+	} 
 	act_dialogue(_dialogue);
 }
 

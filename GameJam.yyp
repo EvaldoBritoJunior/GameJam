@@ -49,6 +49,7 @@
     {"id":{"name":"obj_pc_handler","path":"objects/obj_pc_handler/obj_pc_handler.yy",},},
     {"id":{"name":"rm_act_1","path":"rooms/rm_act_1/rm_act_1.yy",},},
     {"id":{"name":"rm_opening","path":"rooms/rm_opening/rm_opening.yy",},},
+    {"id":{"name":"scr_audience","path":"scripts/scr_audience/scr_audience.yy",},},
     {"id":{"name":"scr_characters","path":"scripts/scr_characters/scr_characters.yy",},},
     {"id":{"name":"scr_cp_sequences","path":"scripts/scr_cp_sequences/scr_cp_sequences.yy",},},
     {"id":{"name":"scr_dialogue","path":"scripts/scr_dialogue/scr_dialogue.yy",},},

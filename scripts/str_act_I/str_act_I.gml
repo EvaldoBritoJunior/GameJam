@@ -15,7 +15,7 @@ _next = new p_interaction(helena, _optionA, _optionB, _optionC);
 
 _next = new dialogue(helena, "Quanta ousadia... Essas palavras são falsas e pertencem a Hérmia, não a mim. Você não se envergonha de me fazer os mesmo juramentos que ainda ontem lhe fazia?", 
 			_next);
-_next = new dialogue(helena, "Purê de batata", 
+_next = new dialogue(demetrio, "Purê de batata", 
 			_next);
 _next = new dialogue(-1, "Pamonha", 
 			_next);
