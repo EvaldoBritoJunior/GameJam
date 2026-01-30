@@ -1,4 +1,4 @@
-if (waiting == true) {
+if (waiting && !stop) {
 	waiting = false;
 	end_dialogue();
 }

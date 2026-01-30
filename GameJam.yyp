@@ -68,6 +68,7 @@
     {"id":{"name":"spr_oberon","path":"sprites/spr_oberon/spr_oberon.yy",},},
     {"id":{"name":"spr_option_button","path":"sprites/spr_option_button/spr_option_button.yy",},},
     {"id":{"name":"spr_pixel","path":"sprites/spr_pixel/spr_pixel.yy",},},
+    {"id":{"name":"spr_profiles","path":"sprites/spr_profiles/spr_profiles.yy",},},
     {"id":{"name":"spr_screen","path":"sprites/spr_screen/spr_screen.yy",},},
     {"id":{"name":"spr_test","path":"sprites/spr_test/spr_test.yy",},},
     {"id":{"name":"spr_titania","path":"sprites/spr_titania/spr_titania.yy",},},

@@ -1,5 +1,5 @@
 global.audience_status = 100;
 
-add_audience_status = function(_value) {
+global.add_audience_status = function(_value) {
 	global.audience_status += _value;
 }

@@ -3,6 +3,7 @@ current_dialogue = -1;
 dialogue_txt = "";
 movement = 25;
 waiting = false;
+stop = false;
 
 change_npc = function(_char) {
 	sprite_index = _char.spr;
@@ -38,12 +39,12 @@ start_dialogue = function(_dialogue) {
 	var _char_humor = _char.humor;
 	image_index = get_humor(_char_humor);
 	if (_char_humor > 8) {
-		add_audience_status(5);
+		global.add_audience_status(5);
 	} else if (_char_humor < 3) {
-		add_audience_status(-10);
+		global.add_audience_status(-10);
 	} else if (_char_humor < 5) {
-		add_audience_status(-3);
+		global.add_audience_status(-3);
 	} 
-	act_dialogue(_dialogue);
+	act_dialogue();
 }
 

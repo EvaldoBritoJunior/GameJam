@@ -3,6 +3,7 @@ dialogue_txt = "";
 movement = 25;
 buttons = [-1, -1, -1];
 waiting = false;
+stop = false;
 
 end_dialogue = function() {
 	depth += 11;
@@ -22,6 +23,7 @@ start_dialogue = function(_dialogue) {
 }
 
 end_options = function(_option) {
+	if (stop) return;
 	for (var i = 0; i < 3; i++)
 	{
 		instance_destroy(buttons[i]);
