@@ -26,6 +26,14 @@ end_options = function(_option) {
 	{
 		instance_destroy(buttons[i]);
 	}
+	
+	var _char = current_dialogue.char;
+	if (_char.impostor){
+		current_dialogue.char.add_humor(-_option.humor_plus);
+	} else {
+		current_dialogue.char.add_humor(_option.humor_plus);
+	}
+	
 	if (!current_dialogue.end_act) {
 		manager_inst.start_scene(_option.go_to_dialogue);
 	} else {

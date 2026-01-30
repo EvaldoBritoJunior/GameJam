@@ -18,7 +18,8 @@ function p_option(_txt, _humor_plus, _go_to_dialogue) constructor {
 	go_to_dialogue = _go_to_dialogue;
 }
 
-function p_interaction(_option1, _option2, _option3, _end_act = false) constructor {
+function p_interaction(_char, _option1, _option2, _option3, _end_act = false) constructor {
+	char = _char;
 	option1 = _option1;
 	option2 = _option2;
 	option3 = _option3;

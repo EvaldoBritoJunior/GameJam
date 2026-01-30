@@ -8,9 +8,9 @@ function get_humor(_valor) {
 	var _response;
 	if (_valor > 8) {
 		_response = humor_type.happy;
-	} else if (valor > 4) {
+	} else if (_valor > 4) {
 		_response = humor_type.neutral;
-	} else if (valor > 2) {
+	} else if (_valor > 2) {
 		_response = humor_type.messy;
 	} else {
 		_response = humor_type.desperate;
@@ -39,6 +39,20 @@ function character(_talk_hap, _talk_nto, _talk_mes, _talk_desp,
 		if (humor > 10) {humor = 10}
 		else if (humor < 0) {humor = 0}
 	};
+	
+	talk_function = function(_str) {
+		var _response;
+		if (humor > 8) {
+			_response = talk_hap(_str);
+		} else if (humor > 4) {
+			_response = talk_nto(_str);
+		} else if (humor > 2) {
+			_response = talk_mes(_str);
+		} else {
+			_response = talk_desp(_str);
+		}
+		return _response;
+	}
 }
 
 var talk_hap;

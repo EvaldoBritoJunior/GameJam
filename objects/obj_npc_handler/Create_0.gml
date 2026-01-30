@@ -20,9 +20,11 @@ end_dialogue = function() {
 }
 
 act_dialogue = function() {
+	var _char = current_dialogue.char;
+	
 	depth -= 11;
 	x += movement;
-	dialogue_txt = current_dialogue.txt;
+	dialogue_txt = _char.talk_function(current_dialogue.txt);
 	alarm[0] = 6;
 }
 
@@ -32,6 +34,7 @@ start_dialogue = function(_dialogue) {
 	if (_char != current_npc) {
 		change_npc(_char);
 	}
+	image_index = get_humor(_char.humor)
 	act_dialogue(_dialogue);
 }
 
