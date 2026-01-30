@@ -95,13 +95,12 @@ function draw_middle_center_outline(
 	draw_set_valign(fa_top);
 }
 
-function draw_right_outline(_x, _y, _text, _font = global.main_font, _text_color = c_white) {
-	var _outline_color = c_black;
+function draw_left_outline(_x, _y, _text, _font = global.main_font, _text_color = #fadc8a, _outline_color = #160853) {
 	var _outline_thickness = 1; 
 	
 	draw_set_font(_font);
 	draw_set_color(_outline_color);
-	draw_set_halign(fa_right);
+	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 
 	// Draw outline in multiple directions

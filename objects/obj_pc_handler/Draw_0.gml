@@ -8,5 +8,5 @@ var _state = time_source_get_state(timer);
 
 if (_state == time_source_state_active)
 {	
-	draw_circular_HP(760, 50, time_source_get_time_remaining(timer), 15, c_red, 50, 1, 20);
+	draw_circular_HP(715, 70, time_source_get_time_remaining(timer), 15, #fadc8a, 30, 1, 20);
 }
