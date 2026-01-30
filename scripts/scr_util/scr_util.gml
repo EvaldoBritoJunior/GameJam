@@ -1,3 +1,5 @@
+global.victory = -1;
+
 function format_text(_text) {
     draw_set_font(font_card_text_10);
 

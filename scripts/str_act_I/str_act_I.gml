@@ -58,36 +58,47 @@ _next = new dialogue(-1, "Conto com você. Vem chegando Helena...",
 _next = new dialogue(hermia, "Meu querido Lisandro, eu juro pelas setas de Cupido: amanhã encontrarei você naquele bosque.", 
 			_next);
 
-_optionA = new p_option("No bosque que fica a uma légua da cidade. Lá onde certa vez vi você com Helena, realizando rituais sagrados na Festa da Primavera.", +0, _next); 
-_optionB = new p_option("No reino de amor comandado por criaturas místicas e fantasiosas, a floresta na qual habitam o rei e a rainha dos elfos e fadas", -2, _next); 
-_optionC = new p_option("No lar dos animais selvagens que correm livres como vossa alma, entre as árvores na qual são realizadas a Festa de Primavera", +1, _next);
+_optionA = new p_option("No bosque que fica a uma légua da cidade.", +0, _next); 
+_optionB = new p_option("No reino de amor, cheio de criaturas místicas.", -2, _next); 
+_optionC = new p_option("No lar das aves que voam livres como vossa alma.", +3, _next);
 
 _next = new p_interaction(hermia, _optionA, _optionB, _optionC);
 _next = new dialogue(hermia, "Onde?",
             _next);
-_next = new dialogue(-1, "Na casa dela poderíamos nos casar e viver felizes, longe das rigorosas leis atenienses. Se você me ama, fuja de casa amanhã à noite e encontre-se comigo.",
+_next = new dialogue(-1, "Se você me ama, fuja de casa amanhã à noite e encontre-se comigo.",
             _next)
-_next = new dialogue(-1, "Isso consola. Porém, escute, Hérmia: eu tenho uma tia muito rica, viúva, que mora a umas sete léguas de Atenas e me considera como um filho.",
+_next = new dialogue(-1, "Na casa dela poderíamos nos casar e viver felizes, longe das rigorosas leis atenienses.",
             _next)
-_next = new dialogue(hermia, "É triste demais ter que aceitar o cativeiro! Mas se o fim de todos os amantes sinceros é ser infeliz, que o destino nos ensine a ser pacientes...",
+_next = new dialogue(-1, "Uma viúva, que mora a umas sete léguas de Atenas e me considera como um filho.",
+			_next)
+_next = new dialogue(-1, "Isso consola. Porém, escute, Hérmia: eu tenho uma tia muito rica...",
+            _next)
+_next = new dialogue(hermia, "Mas se o fim de todos os amantes sinceros é ser infeliz, que o destino nos ensine a ser pacientes...", _next)
+_next = new dialogue(hermia, "É triste demais ter que aceitar o cativeiro!",
             _next)
 
-_subA = new dialogue(-1, "enfim, sempre uma sombra vem interromper a felicidade, sempre o sonho acaba em ruína...",
+_subA = new dialogue(-1, "Enfim, sempre uma sombra vem interromper a felicidade, sempre o sonho acaba em ruína...",
             _next)
-_subA = new dialogue(-1, "Ou esbarra em diferenças de idade, ou de condição social, ou em discordâncias familiares, ou então ocorre alguma tragédia guerras, doenças, mortes.",
-            _subB);
-_optionA = new p_option("Por que será que o verdadeiro amor encontra tantas dificuldades?", +1, _subA); 
+_subA = new dialogue(-1, "Ou em discordâncias familiares, ou então ocorre alguma tragédia guerras, doenças, mortes.",
+			_next)
+_subA = new dialogue(-1, "O verdadeiro amor sempre esbarra em diferenças de condição social...",
+            _subA);
+_optionA = new p_option("Por que tantas dificuldades?", +1, _subA); 
 _subB = new dialogue(-1, "Prefiro que viva sua vida com Diana à continuar sofrendo por minha presença.",
             _next)
-_optionB = new p_option("Oh, bela Hérmia! Se o meu amor se tornar a lâmina que trará a sua morte, pois que meu amor morra sufocado.", +0, _subB); 
-_optionC = new p_option("Você deveria casar com Demétrio então.", -2, _next);
+_subB = new dialogue(-1, "Assim ele não se tornará a lâmina que trará a sua morte",
+			_next)
+_optionB = new p_option("Que meu amor morra sufocado.", +0, _subB); 
+_optionC = new p_option("Você deveria casar com Demétrio então.", -6, _next);
 
 _next = new p_interaction(hermia, _optionA, _optionB, _optionC);
-_next = new dialogue(hermia, "Se eu me recusar a desposar Demétrio, resta-me ou morrer, ou retirar-se da sociedade e viver para sempre casta no templo de Diana",
+_next = new dialogue(hermia, "Ou retirar-se da sociedade e viver para sempre casta no templo de Diana",
+			_next)
+_next = new dialogue(hermia, "Se eu me recusar a desposar Demétrio, resta-me ou morrer...",
             _next);
 _next = new dialogue(hermia, "Egeu, meu pai, finalmente me deu um ultimato.",
             _next);
-_next = new dialogue(hermia, "Talvez por falta d’água que viesse da tempestade de meus próprios olhos...", 
+_next = new dialogue(hermia, "Talvez por falta de água que viesse da tempestade de meus próprios olhos...", 
 			_next);
 global.actI_start = new dialogue(-1, "Por que está tão pálida, minha querida? Parece que de repente murcharam as rosas de sua face.",
 			_next);

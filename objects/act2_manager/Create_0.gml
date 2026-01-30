@@ -2,7 +2,7 @@
 event_inherited();
 
 end_act = function() {
-	transition_start(rm_act_1, sq_fade_out, sq_fade_in);
+	transition_start(rm_ending, sq_fade_out, sq_fade_in);
 }
 
 var _this = self;

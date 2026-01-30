@@ -117,6 +117,7 @@ talk_mes = function(_str) {return _str};
 talk_desp = function(_str) {return _str};
 
 oberon = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_oberon, 0, 1, 1);
+oberon.impostor = true;
 
 #endregion
 
