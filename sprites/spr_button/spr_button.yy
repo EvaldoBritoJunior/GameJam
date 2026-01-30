@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Temporary",
-    "path":"folders/Sprites/Temporary.yy",
+    "name":"Start Screen",
+    "path":"folders/Sprites/Start Screen.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

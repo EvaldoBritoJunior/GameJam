@@ -12,3 +12,7 @@ start_scene = function(_scene) {
 		pc_handler_inst.start_interaction(_scene);
 	}
 }
+
+end_game = function() {
+	game_end();
+}

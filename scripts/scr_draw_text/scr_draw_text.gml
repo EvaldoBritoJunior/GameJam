@@ -1,6 +1,6 @@
 global.main_font = fnt_main;
 
-function draw_middle_center(_x, _y, _txt, _font = global.main_font, _color = c_white) {
+function draw_middle_center(_x, _y, _txt, _font = global.main_font, _color = #fadc8a) {
 	draw_set_font(_font);
 	draw_set_color(_color);
 	draw_set_halign(fa_center);
@@ -65,8 +65,9 @@ function draw_center_outline(_x, _y, _text, _font = global.main_font, _text_colo
 	draw_set_valign(fa_top);
 }
 
-function draw_middle_center_outline(_x, _y, _text, _font = global.main_font, _text_color = c_white) {
-	var _outline_color = c_black;
+function draw_middle_center_outline(
+		_x, _y, _text, _font = global.main_font, 
+		_text_color = #fadc8a, _outline_color = #160853) {
 	var _outline_thickness = 1; 
 	
 	draw_set_font(_font);

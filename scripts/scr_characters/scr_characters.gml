@@ -84,14 +84,14 @@ helena = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_helena);
 
 #endregion
 
-#region Hernia
+#region Hermia
 
 talk_hap = function(_str) {return _str};
 talk_nto = function(_str) {return _str};
 talk_mes = function(_str) {return _str};
 talk_desp = function(_str) {return _str};
 
-hernia = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_hernia);
+hermia = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_hermia);
 
 #endregion
 

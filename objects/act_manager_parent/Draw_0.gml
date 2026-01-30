@@ -1,5 +1,7 @@
 var _pc = (global.audience_status / 100) * 100;
-draw_healthbar(1150, 190, 1225, 430, _pc, c_black, c_red, c_lime, 3, true, true)
+
+var _i = ceil(global.audience_status / 20);
+draw_sprite(spr_audience_level, _i, x, y);
 
 if (!waiting) {
 	draw_sprite(spr_profiles, 0, x, y);

@@ -1,7 +1,7 @@
 current_npc = -1;
 current_dialogue = -1;
 dialogue_txt = "";
-movement = 25;
+movement = 15;
 waiting = false;
 stop = false;
 
@@ -45,6 +45,11 @@ start_dialogue = function(_dialogue) {
 	} else if (_char_humor < 5) {
 		global.add_audience_status(-3);
 	} 
-	act_dialogue();
+	
+	if (global.audience_status == 0) {
+		manager_inst.end_game();
+	} else {
+		act_dialogue();
+	}
 }
 
