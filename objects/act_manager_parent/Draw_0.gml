@@ -4,5 +4,5 @@ var _i = ceil(global.audience_status / 20);
 draw_sprite(spr_audience_level, _i, x, y);
 
 if (!waiting) {
-	draw_sprite(spr_profiles, 0, x, y);
+	draw_sprite(spr_profile_value, 0, x, y);
 }

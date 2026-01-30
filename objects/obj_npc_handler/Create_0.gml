@@ -3,7 +3,7 @@ current_dialogue = -1;
 dialogue_txt = "";
 movement = 15;
 waiting = false;
-stop = false;
+show_profile = true;
 
 change_npc = function(_char) {
 	sprite_index = _char.spr;
