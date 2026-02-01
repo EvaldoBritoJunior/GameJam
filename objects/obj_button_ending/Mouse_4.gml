@@ -1,6 +1,5 @@
 // Inherit the parent event
 event_inherited();
 
-if (global.victory == -1) {
-	global.victory = false;
-}
+global.victory = char.impostor;
+manager_inst.ending();

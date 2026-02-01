@@ -22,9 +22,10 @@ function get_humor(_valor) {
 
 #region Character constructor
 
-function character(_talk_hap, _talk_nto, _talk_mes, _talk_desp,
+function character(_name, _talk_hap, _talk_nto, _talk_mes, _talk_desp,
 					_char_spr, _improvisation, _drama, _eloquence
 ) constructor {
+	name = _name
 	humor = 7;
 	impostor = false;
 	talk_hap =  _talk_hap;
@@ -72,7 +73,7 @@ talk_nto = function(_str) {return _str};
 talk_mes = function(_str) {return _str};
 talk_desp = function(_str) {return _str};
 
-demetrio = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_demetrio, 1, 2, 0);
+demetrio = new character("Demétrio", talk_hap, talk_nto, talk_mes, talk_desp, spr_demetrio, 1, 2, 0);
 
 #endregion
 
@@ -83,7 +84,7 @@ talk_nto = function(_str) {return _str};
 talk_mes = function(_str) {return _str};
 talk_desp = function(_str) {return _str};
 
-helena = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_helena, 0, 2, 0);
+helena = new character("Helena", talk_hap, talk_nto, talk_mes, talk_desp, spr_helena, 0, 2, 0);
 
 #endregion
 
@@ -94,7 +95,7 @@ talk_nto = function(_str) {return _str};
 talk_mes = function(_str) {return _str};
 talk_desp = function(_str) {return _str};
 
-hermia = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_hermia, 2, 1, 0);
+hermia = new character("Hérmia", talk_hap, talk_nto, talk_mes, talk_desp, spr_hermia, 2, 1, 0);
 
 #endregion
 
@@ -105,7 +106,7 @@ talk_nto = function(_str) {return _str};
 talk_mes = function(_str) {return _str};
 talk_desp = function(_str) {return _str};
 
-nick = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_nick, 2, 2, 2);
+nick = new character("Fundilhos", talk_hap, talk_nto, talk_mes, talk_desp, spr_nick, 2, 2, 2);
 
 #endregion
 
@@ -116,8 +117,7 @@ talk_nto = function(_str) {return _str};
 talk_mes = function(_str) {return _str};
 talk_desp = function(_str) {return _str};
 
-oberon = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_oberon, 0, 1, 1);
-oberon.impostor = true;
+oberon = new character("Oberon", talk_hap, talk_nto, talk_mes, talk_desp, spr_oberon, 0, 1, 1);
 
 #endregion
 
@@ -128,6 +128,10 @@ talk_nto = function(_str) {return _str};
 talk_mes = function(_str) {return _str};
 talk_desp = function(_str) {return _str};
 
-titania = new character(talk_hap, talk_nto, talk_mes, talk_desp, spr_titania, 1, 2, 0);
+titania = new character("Titânia", talk_hap, talk_nto, talk_mes, talk_desp, spr_titania, 1, 2, 0);
 
 #endregion
+
+global.characters = [demetrio, helena, hermia, nick, oberon, titania];
+global.villain = characters[current_second % 6];
+villain.impostor = true;

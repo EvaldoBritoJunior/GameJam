@@ -5,3 +5,7 @@ if (global.victory == -1) {
 } else {
 	draw_middle_center_outline(x, y, "Errado!");
 }
+
+if (global.victory != -1) {
+	draw_sprite(global.villain.spr, 4, 1000, 360);
+}
