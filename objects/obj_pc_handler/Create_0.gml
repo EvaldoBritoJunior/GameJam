@@ -1,14 +1,16 @@
 current_dialogue = -1;
+txts = [];
+length = 0;
+idx = 0;
 dialogue_txt = "";
 movement = 15;
 buttons = [-1, -1, -1];
 waiting = false;
-stop = false;
 timer = time_source_create(time_source_game, 15, time_source_units_seconds,
 			function() {
 				var _options = [current_dialogue.option1, current_dialogue.option2, current_dialogue.option3];
 				var _option = _options[current_second % 3];
-				end_options_step(_option);
+				end_options(_option);
 			}, []
 	)
 
@@ -22,14 +24,21 @@ end_dialogue = function() {
 	}
 }
 
-start_dialogue = function(_dialogue) {
-	depth -= 11;
-	x -= movement;
-	dialogue_txt = current_dialogue.txt;
+act_dialogue = function() {
+	dialogue_txt = txts[idx];
 	alarm[0] = 6;
 }
 
-end_options_step = function(_option) {
+start_dialogue = function(_dialogue) {
+	txts = divide_text(_dialogue.txt);
+	length = array_length(txts);
+	idx = 0;
+	depth -= 11;
+	x -= movement;
+	act_dialogue();
+}
+
+end_options = function(_option) {
 	var _state = time_source_get_state(timer);
 
     if (_state == time_source_state_active)
@@ -56,17 +65,12 @@ end_options_step = function(_option) {
 	}
 }
 
-end_options = function(_option) {
-	if (stop) return;
-	end_options_step(_option);
-}
-
 start_options = function(_interaction) {
 	var _this = self;
 	var _options = [_interaction.option1, _interaction.option2, _interaction.option3];
 	var _sprites = [spr_option_button_1, spr_option_button_2, spr_option_button_3];
-	var _xs = [672, 608, 544];
-	var _ys = [175, 275, 385];
+	var _xs = [705, 630, 544];
+	var _ys = [175, 276, 385];
 	for (var i = 0; i < 3; i++)
 	{
 		buttons[i] = instance_create_layer(

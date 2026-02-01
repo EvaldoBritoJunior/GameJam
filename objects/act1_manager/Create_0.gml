@@ -7,6 +7,7 @@ end_act = function() {
 
 var _this = self;
 pc_handler_inst = instance_create_layer(x, y, "Instances", obj_pc_handler, {manager_inst: _this});
+pc_handler_inst.image_index = 0;
 npc_handler_inst = instance_create_layer(x, y, "Instances", obj_npc_handler, {manager_inst: _this});
 first_scene = global.actI_start;
 

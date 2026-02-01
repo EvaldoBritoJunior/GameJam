@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"str_act_III",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"str_act_III",
+  "parent":{
+    "name":"Dialogues",
+    "path":"folders/Scripts/Dialogues.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

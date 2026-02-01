@@ -1,4 +1,9 @@
-if (waiting && !stop) {
+if (waiting) {
 	waiting = false;
-	end_dialogue();
+	idx++;
+	if (length == idx) {
+		end_dialogue();
+	} else {
+		act_dialogue();
+	}
 }

@@ -1,5 +1,8 @@
 current_npc = -1;
 current_dialogue = -1;
+txts = [];
+length = 0;
+idx = 0;
 dialogue_txt = "";
 movement = 15;
 waiting = false;
@@ -21,11 +24,7 @@ end_dialogue = function() {
 }
 
 act_dialogue = function() {
-	var _char = current_dialogue.char;
-	
-	depth -= 11;
-	x += movement;
-	dialogue_txt = _char.talk_function(current_dialogue.txt);
+	dialogue_txt = txts[idx];
 	alarm[0] = 6;
 }
 
@@ -49,6 +48,11 @@ start_dialogue = function(_dialogue) {
 	if (global.audience_status == 0) {
 		manager_inst.end_game();
 	} else {
+		txts = divide_text(_char.talk_function(current_dialogue.txt));
+		length = array_length(txts);
+		idx = 0;
+		depth -= 11;
+		x += movement;
 		act_dialogue();
 	}
 }
